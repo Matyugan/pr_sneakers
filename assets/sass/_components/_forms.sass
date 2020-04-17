@@ -1,0 +1,62 @@
+.auth-form
+  display: flex
+  flex-direction: column
+  max-width: 345px
+  width: 100%
+  &--input
+    padding: 14px 20px
+    outline: none
+    margin-bottom: 10px
+    border: 1px solid $light-gray-color
+    border-radius: 4px
+    &::placeholder
+      color: $dark-gray-color
+  &--select
+    margin-bottom: 10px
+    font-size: 14px
+    line-height: 20px
+    border: 1px solid $light-gray-color
+    border-radius: 4px
+    padding: 14px 20px
+    background-image: url('../../static/images/raffles-page/img_select-arrow.svg')
+    background-repeat: no-repeat
+    background-position: 90% 20px
+    background-color: $white-color
+    outline: none
+  &--text
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    margin-bottom: 0
+    margin-top: 0
+    &-wrapper
+      margin-bottom: 25px
+  &--button
+    margin-top: 10px
+  
+  &-sign-in
+    font-size: 14px
+    line-height: 20px
+    color: $default-text-color
+    &--wrapper
+      margin-top: 20px
+      text-align: right
+    &--arrow
+      margin-left: 8px
+
+  &-reset-password
+    &--wrapper
+      margin-top: 20px
+      text-align: right
+      display: flex
+      font-size: 14px
+      flex-direction: column
+    &--text
+      line-height: 20px
+      color: $default-text-color
+      cursor: pointer
+      &:nth-child(1)
+        margin-bottom: 20px
+        
+    &--arrow
+      margin-left: 8px

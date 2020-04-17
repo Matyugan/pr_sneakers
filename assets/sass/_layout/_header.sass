@@ -1,0 +1,57 @@
+.header
+  &--inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding:
+      top: 18px
+      bottom: 18px
+    font-weight: 500
+.geoposition
+  display: flex
+  align-items: center
+  &--inner
+    display: flex
+    align-items: center
+  &--icon
+    margin-right: 10px
+  &--city
+    display: flex
+    align-items: center
+    &-arrow
+      margin-left: 5px
+  &--separator
+    margin:
+      left: 40px
+      right: 40px
+    +media(lg)
+      margin:
+        left: 20px
+        right: 20px
+    +media(md)
+      display: none
+  &--link-inner
+    +media(md)
+      display: none
+.logo
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  &--image
+    +media(lg)
+      width: 200px
+    +media(sm)
+      width: 130px
+.login
+  display: flex
+  &--separator
+    margin:
+      left: 5px
+      right: 5px
+    +media(md)
+      display: none
+  .link
+    +media(md)
+      &:last-of-type
+        display: none

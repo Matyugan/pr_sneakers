@@ -1,0 +1,47 @@
+.raffles
+  margin-bottom: 60px
+  &-item
+    display: flex
+    flex-direction: column
+    &:nth-child(n + 4)
+      margin-top: 40px
+    +media(md)
+      &:nth-child(n + 3)
+        margin-top: 20px
+    &--image
+      width: 100%
+      object-fit: cover
+      margin-bottom: 20px
+    &--time
+      color: $dark-gray-color
+      margin-bottom: 20px
+      display: flex
+    &--name
+      font-size: 24px
+      font-weight: 600
+      color: $default-text-color
+      margin-top: 0
+      margin-bottom: 20px
+    &--price
+      font-size: 20px
+      font-weight: 500
+      line-height: 20px
+    &--date
+      &-separator
+        width: 1px
+        height: 16px
+        background-color: $gray-color
+        margin-right: 30px
+        margin-left: 30px
+    &--status
+      font-weight: 900 
+      text-transform: uppercase
+      &_disable
+        color: $red-color
+      &_active
+        color: $green-color
+  &-button
+    color: $default-text-color
+  &-button-wrapper
+    display: flex
+    justify-content: center

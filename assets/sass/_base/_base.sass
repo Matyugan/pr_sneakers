@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html
+	box-sizing: border-box
+	overflow-x: hidden
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.2
+	letter-spacing: 0.03em
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: $brand-color
+	+media(sm)
+		font-size: 14px
+
+*::-webkit-scrollbar-track
+	box-shadow: inset 0 0 6px lighten($brand-color, 30%)
+*::-webkit-scrollbar
+	width: 4px
+*::-webkit-scrollbar-thumb
+	background-color: $brand-color
+
+#__nuxt, #__layout, #__app_wrapper
+	width: 100%
+
+*,
+*::before,
+*::after
+	box-sizing: inherit
+
+*::selection
+	color: $default-text-color
+	background: $brand-color
+
+
+a
+	text-decoration: none
+
+p
+	margin: 0
+	margin-bottom: $gap
+	&:last-child
+		margin: 0
+
+img
+	display: block
+
+select
+	-webkit-appearance: none
+
+button[disabled="disabled"]
+	opacity: 0.5

@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$default-font: 'Metropolis', sans-serif
+
+
+
+/// Copy text color
+/// @type Color
+$default-text-color: #222222 !default
+
+/// Main brand color
+/// @type Color
+$brand-color: #F9F9F9 !default
+
+/// Other colors
+/// @type Color
+$gray-color: #C4C4C4
+$dark-gray-color: #9B9B9B
+$dark-gray-color-2: #9A9A9A
+$white-color: #FFFFFF
+$red-color: #DB3022
+$black-color: #000000
+$light-gray-color: #E5E5E5
+$green-color: #1B9C28
+
+$border-radius: 0 !default
+
+$gap: 20px
+
+
+
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer’s name
+/// @prop {Number} value - Z value mapped to the key
+$z-indexes: ('notification': 9000, 'preloader': 9999, 'modal': 5000, 'toolbar': 4000, 'menu': 3000, 'city-modal': 2000, 'content': 1000, 'overlay': 100, 'media-absolute': 50, 'default': 1, 'below': -1,)
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1240px !default
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: ('xs': 374px, 'sm': 480px, 'md': 768px, 'lg': 992px, 'xl': 1240px) !default
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default
+
+
+$cubic: cubic-bezier(.35,0,0,1.01)

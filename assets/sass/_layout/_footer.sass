@@ -1,0 +1,57 @@
+.footer
+  font-size: 14px
+  padding-top: 100px
+  &--inner-wrapper
+    +media(lg)
+      grid-template-columns: 2fr 1fr
+    +media(md)
+      grid-template-columns: 1fr
+  &--inner
+    padding:
+      top: 25px
+      bottom: 25px
+    border:
+      top: 1px solid $gray-color
+      bottom: 1px solid $gray-color
+  &--info
+    font-size: 12px
+    display: flex
+    flex-direction: column
+    +media(md)
+      margin-bottom: 20px
+  &--logo
+    margin-bottom: 20px
+  &--copyright
+    margin-bottom: 20px
+  &-link
+    display: flex
+    flex-wrap: wrap
+    align-content: space-between
+    justify-content: space-between
+    +media(md)
+      margin-bottom: 20px
+    &--item
+      width: 34%
+      +media(md)
+        width: 50%
+  &--polisy
+    text-decoration: underline
+  
+  &-feedback
+    &--inner
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      +media(md)
+        align-items: flex-start
+    &--text
+      margin-bottom: 25px
+  
+  &-developers
+    font-size: 12px
+    padding:
+      top: 15px
+      bottom: 15px
+    text-align: center
+    &--link
+      color: $default-text-color

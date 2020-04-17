@@ -1,0 +1,122 @@
+.raffles-item-card
+  &--image-wrapper
+    +media(md)
+      display: flex
+      justify-content: center
+  &--image
+    max-width: 480px
+    width: 100%
+    border-radius: 4px
+    +media(sm)
+      max-width: 300px
+  &--description
+    color: $default-text-color
+    +media(md)
+      display: flex
+      flex-direction: column
+      align-items: center
+  &--title
+    font-size: 36px
+    font-weight: 600
+    line-height: 36px
+    margin-top: 0
+    margin-bottom: 20px
+    +media(md)
+      font-size: 30px
+      text-align: center
+  &--price
+    font-size: 30px
+    font-weight: bold
+    line-height: 30px
+    margin-top: 0
+    margin-bottom: 0
+    margin-right: 20px
+    +media(sm)
+      margin-right: 0
+      margin-bottom: 20px
+    &-wrapper
+      margin-bottom: 40px
+      display: flex
+      align-items: center
+      +media(sm)
+        flex-direction: column
+  &--subtitle
+    font-size: 18px
+    font-weight: 600
+    line-height: 22px
+    margin-top: 0
+    margin-bottom: 20px
+
+  &-shop
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    +media(sm)
+      align-items: unset
+    &--item
+      &-registered
+        opacity: 0.3
+      &-inner
+        font-size: 14px
+        line-height: 150%
+        display: flex
+        align-items: center
+        padding: 13px 70px 13px 20px
+        border: 1px solid $light-gray-color
+        border-radius: 4px
+        background-color: $white-color
+        margin-bottom: 20px
+        min-width: 388px
+        +media(sm)
+          min-width: 270px
+        &_active
+          opacity: 1
+        &_disabled
+          opacity: 0.3
+    &--registered-message
+      color: $red-color
+    &--checkbox
+      display: none
+      &-label
+        width: 20px
+        height: 20px
+        border: 2px solid $default-text-color
+        border-radius: 4px
+        margin-right: 20px
+        position: relative
+        &::before
+          content: ''
+          display: block
+          width: 18px
+          height: 18px
+          position: absolute
+          left: -1px
+          top: -1px
+          background-image: url('../../static/images/raffles-page/img_checkbox-arrow.svg')
+          background-position: center center
+          background-color: $default-text-color
+          background-repeat: no-repeat
+          border-radius: 4px
+          transition: opacity 0.1s linear
+          opacity: 0
+      &:checked + .raffles-item-card-shop--checkbox-label::before
+        opacity: 1
+    &--register
+      display: flex
+      +media(sm)
+        flex-direction: column
+    &--size
+      font-size: 14px
+      line-height: 20px
+      border: 1px solid $black-color
+      border-radius: 4px
+      padding: 10px 60px 10px 14px
+      margin-right: 30px
+      background-image: url('../../static/images/raffles-page/img_select-arrow.svg')
+      background-repeat: no-repeat
+      background-position: 150px 17px
+      background-color: $white-color
+      outline: none
+      +media(sm)
+        margin-right: 0
+        margin-bottom: 20px

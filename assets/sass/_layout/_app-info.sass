@@ -1,0 +1,41 @@
+.app-info
+  &-work
+    &--item
+      display: flex
+      margin-bottom: 40px
+      &:last-child
+        margin-bottom: 0
+      &-number
+        font-size: 24px
+        font-weight: 500
+        width: 40px
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        border: 2px solid $black-color
+        color: $black-color
+        margin-right: 30px
+      &-description
+        color: $black-color
+        line-height: 130%
+        +media(lg)
+          flex: 1
+  &-about-us
+    padding-left: 110px
+    border-left: 1px solid $light-gray-color
+    +media(md)
+      border-left: none
+    +media(md)
+      padding-left: unset
+      padding-top: 70px
+    &--text
+      margin-bottom: 30px
+      letter-spacing: 0.05em
+      line-height: 130%
+    &--image
+      width: 100%
+      max-width: 475px
+
+  

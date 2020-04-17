@@ -1,0 +1,24 @@
+.hero-banner
+  padding: 100px
+  background-image: url('../../static/images/main-page/bg_hero-banner.jpg')
+  background-size: cover
+  background-position: center
+  border-radius: 4px
+  +media(lg)
+    padding: 50px
+  +media(sm)
+    padding: 30px
+  &-content
+    &--title
+      font-size: 34px
+      font-weight: 600
+      line-height: 130%
+      color: $white-color
+      margin-top: 0
+      margin-bottom: 10px
+      max-width: 560px
+      +media(md)
+        font-size: 30px
+    &--time-action
+      color: $brand-color
+      margin-bottom: 30px
