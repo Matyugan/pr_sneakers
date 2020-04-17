@@ -94,7 +94,7 @@
 
         .your-wins
           h2.section-title.section-title_left Your wins
-          p.your-wins--text You have no wins at this moment
+          p.your-wins--text(v-for="(item, index) in WINNER_RAFFLES" :key="index") {{ item.ReleaseName }} - {{ item.Shop }} Price: {{ item.Price }} / Currency: {{ item.Currency }} / Type: {{ item.Type }} / Set: {{ item.Set }} / Size: {{ item.Size }}
 
 </template>
 
@@ -127,6 +127,9 @@ export default {
     },
     USER_ADDRESS() {
       return this.$store.getters.getAddress
+    },
+    WINNER_RAFFLES() {
+      return this.$store.getters.getWinnerRaffles
     }
   },
   methods: {

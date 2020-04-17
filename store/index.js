@@ -10,13 +10,13 @@ const store = () => {
       address: null,
       successRegistration: false,
       error: false,
-      raffles: []
+      raffles: [],
+      winnerRaffle: null
     }),
 
     mutations: {
       setUserData(state, payload) {
         state.user = payload
-        console.log(state.user)
       },
       setUserAddress(state, payload) {
         state.address = payload
@@ -32,6 +32,10 @@ const store = () => {
       },
       setRaffles(state, payload) {
         state.raffles = payload
+      },
+      setWinnerRafle(state, payload) {
+        state.winnerRaffle = payload
+        console.log(state.winnerRaffle)
       }
     },
 
@@ -93,6 +97,7 @@ const store = () => {
               ...response.Result
             })
           })
+          this.dispatch('winnerRaffles')
         }
       },
 
@@ -168,8 +173,16 @@ const store = () => {
           this.$router.push('/')
         }).catch(error => console.log(error))
       },
+
       subscribe({commit}, payload) {
         this.$axios.$post('/Subscribe', payload)
+      },
+
+      winnerRaffles({ commit }) {
+        this.$axios.$get(`/UserWins?SessionToken=${this.$cookies.get('token').SessionToken}`)
+        .then((response) => {
+          commit('setWinnerRafle', response.Result)
+        })
       }
     },
 
@@ -195,6 +208,9 @@ const store = () => {
             return raffle.ReleaseName.replace(/\s/g, '') === ReleaseName
           }) || {}
         }
+      },
+      getWinnerRaffles(state) {
+        return state.winnerRaffle || {}
       }
     }
   })
