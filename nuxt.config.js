@@ -5,7 +5,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'pr_sneakers',
+    title: 'Sneakerdraws',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,12 +28,26 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/recaptcha',
-    'cookie-universal-nuxt'
+    'cookie-universal-nuxt',
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '62026063',
+        webvisor: true,
+        clickmap:true,
+        // useCDN:false,
+        trackLinks:true,
+        accurateTrackBounce:true,
+      }
+    ]
   ],
 
   /* 
   ** Options AXIOS
   */
+  plugins: [
+    { src: '~plugins/googleAnalytics.js', mode: 'client' }
+  ],
   axios: {
     baseURL:"https://sneakerdraws.com/api"
   },

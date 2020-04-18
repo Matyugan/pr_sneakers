@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/recaptcha": "^0.6.2",
+    "@nuxtjs/yandex-metrika": "^1.0.3",
     "cookie-universal-nuxt": "^2.1.2",
     "nuxt": "^2.0.0"
   },
