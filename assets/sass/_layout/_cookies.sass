@@ -8,8 +8,14 @@
   position: fixed
   bottom: 0
   width: 100%
+  +media(md)
+    flex-direction: column
   &--text
     font-size: 14px
+    margin-right: 20px
+    +media(md)
+      margin-bottom: 15px
+      text-align: center
   &--button
     padding-top: 6px
     padding-bottom: 6px

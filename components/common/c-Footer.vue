@@ -20,8 +20,8 @@
                   path(d='M38.6738 8.43754V1.26904H41.4903V1.89679H39.3458V4.41792H41.352V5.01529H39.3458V7.79967H41.5891V8.43754H38.6738Z', fill='black')
                   path(d='M48.6152 8.43754L47.3502 5.11654H46.4509V8.43754H45.769V1.26904H47.449C47.6796 1.26904 47.9003 1.30279 48.1112 1.37029C48.3286 1.43104 48.5196 1.53567 48.6843 1.68417C48.8556 1.83267 48.9907 2.02842 49.0895 2.27142C49.1949 2.51442 49.2476 2.81142 49.2476 3.16242C49.2476 3.46617 49.2081 3.72942 49.129 3.95217C49.0566 4.16817 48.9577 4.35042 48.8326 4.49892C48.714 4.64742 48.5789 4.76217 48.4274 4.84317C48.2825 4.92417 48.1375 4.97479 47.9926 4.99504L49.3563 8.43754H48.6152ZM48.5756 3.19279C48.5756 2.93629 48.5394 2.72367 48.4669 2.55492C48.401 2.37942 48.3088 2.24104 48.1902 2.13979C48.0782 2.03854 47.9465 1.96767 47.7949 1.92717C47.65 1.88667 47.4985 1.86642 47.3403 1.86642H46.4509V4.55967H47.37C47.7455 4.55967 48.0387 4.44154 48.2495 4.20529C48.4669 3.96229 48.5756 3.62479 48.5756 3.19279Z', fill='black')
 
-                .footer--copyright © Sneaker Draws, 2020
-                nuxt-link(to="/").footer--polisy.link Privacy Policy
+                span.footer--terms.link(@click="openTosModal") Terms of Service
+                span.footer--polisy.link(@click="openPolicyModal") Privacy Policy
               .footer-link
                 nuxt-link(to="/raffles" class="link footer-link--item") All raffles
                 nuxt-link(to="/" class="link footer-link--item") Upcoming
@@ -40,6 +40,14 @@
 </template>
 <script>
 export default {
-  name: 'c_Footer'
+  name: 'c_Footer',
+  methods: {
+    openTosModal() {
+      this.$store.dispatch('tosModal', true)
+    },
+    openPolicyModal() {
+      this.$store.dispatch('policyModal', true)
+    }
+  }
 }
 </script>

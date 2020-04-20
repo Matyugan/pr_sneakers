@@ -11,7 +11,9 @@ const store = () => {
       successRegistration: false,
       error: false,
       raffles: [],
-      winnerRaffle: null
+      winnerRaffle: null,
+      tosModalStatus: false,
+      policyModalStatus: false
     }),
 
     mutations: {
@@ -35,7 +37,12 @@ const store = () => {
       },
       setWinnerRafle(state, payload) {
         state.winnerRaffle = payload
-        console.log(state.winnerRaffle)
+      },
+      setTosModalStatus(state, payload) {
+        state.tosModalStatus = payload
+      },
+      setPrivacyModalStatus(state, payload) {
+        state.policyModalStatus = payload
       }
     },
 
@@ -183,6 +190,12 @@ const store = () => {
         .then((response) => {
           commit('setWinnerRafle', response.Result)
         })
+      },
+      tosModal({ commit }, payload) {
+        commit('setTosModalStatus', payload)
+      },
+      policyModal({ commit }, payload) {
+        commit('setPrivacyModalStatus', payload)
       }
     },
 
@@ -211,6 +224,12 @@ const store = () => {
       },
       getWinnerRaffles(state) {
         return state.winnerRaffle || {}
+      },
+      getTosModalStatus(state) {
+        return state.tosModalStatus
+      },
+      getPolicyModalStatus(state) {
+        return state.policyModalStatus
       }
     }
   })
